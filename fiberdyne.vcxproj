@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AECDFBB3-A370-400C-BF76-C66E3E5FE95F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fiberdyne</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\ABlockDevice.h" />
+    <ClInclude Include="Core\ABufferedStream.h" />
+    <ClInclude Include="Core\AShard.h" />
+    <ClInclude Include="Core\AStream.h" />
+    <ClInclude Include="Core\bitbang.h" />
+    <ClInclude Include="Core\DataChunk.h" />
+    <ClInclude Include="Core\Handle.h" />
+    <ClInclude Include="Core\IOCompletionPort.h" />
+    <ClInclude Include="Core\MappedFile.h" />
+    <ClInclude Include="Core\MemoryStream.h" />
+    <ClInclude Include="Core\StopWatch.h" />
+    <ClInclude Include="FiberCore\AThread.h" />
+    <ClInclude Include="FiberCore\Scheduler.h" />
+    <ClInclude Include="FiberCore\TEX.h" />
+    <ClInclude Include="FiberCore\TEXTask.h" />
+    <ClInclude Include="FiberCore\utils.h" />
+    <ClInclude Include="FiberCore\WaitForCondition.h" />
+    <ClInclude Include="FiberCore\WaitForEvent.h" />
+    <ClInclude Include="FiberCore\WaitForIO.h" />
+    <ClInclude Include="FiberCore\WaitForTime.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\ABufferedStream.cpp" />
+    <ClCompile Include="Core\AShard.cpp" />
+    <ClCompile Include="Core\AStream.cpp" />
+    <ClCompile Include="Core\DataChunk.cpp" />
+    <ClCompile Include="Core\IOCompletionPort.cpp" />
+    <ClCompile Include="Core\MappedFile.cpp" />
+    <ClCompile Include="Core\MemoryStream.cpp" />
+    <ClCompile Include="Core\StopWatch.cpp" />
+    <ClCompile Include="FiberCore\AThread.cpp" />
+    <ClCompile Include="FiberCore\lib_utils.cpp" />
+    <ClCompile Include="FiberCore\Scheduler.cpp" />
+    <ClCompile Include="FiberCore\TEX.cpp" />
+    <ClCompile Include="FiberCore\TEXTask.cpp" />
+    <ClCompile Include="FiberCore\WaitForCondition.cpp" />
+    <ClCompile Include="FiberCore\WaitForEvent.cpp" />
+    <ClCompile Include="FiberCore\WaitForIO.cpp" />
+    <ClCompile Include="FiberCore\WaitForTime.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

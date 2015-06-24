@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fiberdyne", "fiberdyne.vcxproj", "{AECDFBB3-A370-400C-BF76-C66E3E5FE95F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "basic_thread", "test\basic_thread\basic_thread.vcxproj", "{3CA6EDEB-5159-43FB-AAC6-DFC03291F20A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AECDFBB3-A370-400C-BF76-C66E3E5FE95F} = {AECDFBB3-A370-400C-BF76-C66E3E5FE95F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AECDFBB3-A370-400C-BF76-C66E3E5FE95F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AECDFBB3-A370-400C-BF76-C66E3E5FE95F}.Debug|Win32.Build.0 = Debug|Win32
+		{AECDFBB3-A370-400C-BF76-C66E3E5FE95F}.Release|Win32.ActiveCfg = Release|Win32
+		{AECDFBB3-A370-400C-BF76-C66E3E5FE95F}.Release|Win32.Build.0 = Release|Win32
+		{3CA6EDEB-5159-43FB-AAC6-DFC03291F20A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3CA6EDEB-5159-43FB-AAC6-DFC03291F20A}.Debug|Win32.Build.0 = Debug|Win32
+		{3CA6EDEB-5159-43FB-AAC6-DFC03291F20A}.Release|Win32.ActiveCfg = Release|Win32
+		{3CA6EDEB-5159-43FB-AAC6-DFC03291F20A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
